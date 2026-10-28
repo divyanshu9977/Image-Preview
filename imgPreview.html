@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Image preview here</h2>
+    <input type="file" accept="image/*" onchange="prevFun(event)">
+    <br></br>
+    <img id="img" width="200">
+    <script>
+        function prevFun(e){
+            let img = document.getElementById("img");
+            img.src=URL.createObjectURL(e.target.files[0]);
+        }
+    </script>
+</body>
+
+</html>
